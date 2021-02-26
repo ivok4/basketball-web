@@ -6,15 +6,15 @@ import {Container
 const Main = () => { 
 
     return(
-        
         <Container>
             <div>
-                <img src="assets/NBA-logo.png" alt="Logo" />
-                <h2>2020</h2>
+                <div className="logoContainer">
+                    <img src="assets/NBA-logo.png" alt="Logo" />
+                    <h2>2020</h2>
+                </div>
                 <h1>PERSONAL PROJECTS</h1>
                 <p>design by @anonymus</p>
             </div>
-            
         </Container>
         
     )
