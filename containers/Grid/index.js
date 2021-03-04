@@ -1,5 +1,8 @@
 import React from 'react';
 import { TeamCard } from '../../components';
+import {Container,
+  GridContainer
+} from './styled'
 
 class Grid extends React.Component {
   constructor(props){
@@ -47,8 +50,9 @@ class Grid extends React.Component {
     return (
       <>
         {/* { this.state.teams.map(team => <TeamCard key={team.id} data={team}/>)}  */}
-        <TeamCard teams={this.state.teams} />
-
+        <GridContainer>
+          <TeamCard teams={this.state.teams} />
+        </GridContainer>
       </>
     );
   }
