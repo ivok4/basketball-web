@@ -1,31 +1,39 @@
 import React from 'react'
 import {Card
 } from './styled'
+import {Team} from '../../containers'
+import { useRouter } from 'next/router'
+
 
 import { Link, BrowserRouter as Router, Route, Switch, useParams } from "react-router-dom";
 
 
 const TeamCard = (props) => {
     const  teamInfos  = props.teams;
-    console.log(teamInfos);
+    //console.log(teamInfos);
+
+    const router = useRouter()
+
 
     return(
         <>
             {teamInfos.map((teamInfo,i)  => 
-            <Card id={i}  style={{backgroundColor: "#"+teamInfo.PrimaryColor}} > 
-            <Router>
-                {/* <Link to={`/team/${teamInfo.Key}`}> */}
-                <Link to={`/${teamInfo.Key}`}>
-
+            <Card id={i}  style={{backgroundColor: "#"+teamInfo.PrimaryColor}} 
+            //onClick={() => router.push('/planeta/' + teamInfo.Key)} 
+            //onClick={() => router.push('/team')} 
+            //onClick={() => router.push('/post/abc')}
+            onClick={() => {
+              router.push({
+                pathname: '/post/[pid]',
+                query: { pid: teamInfo.Key },               
+              })
+            }}
+            > 
                     <img
                         src={teamInfo.WikipediaLogoUrl}
                     />
                     <h2 style={{color: "#"+teamInfo.SecondaryColor}}>{teamInfo.City} {teamInfo.Name}</h2>
-                    </Link>
-        <Switch>
-          <Route path="/:id"  children={<Child />}/>
-        </Switch>
-            </Router>
+                    
             </Card>
             )}
            
