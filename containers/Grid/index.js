@@ -31,7 +31,6 @@ class Grid extends React.Component {
     } catch (error) {
       //console.log(error)
     }
-
   }
 
 //   applyFilter(e){

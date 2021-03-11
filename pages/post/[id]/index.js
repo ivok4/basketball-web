@@ -7,18 +7,14 @@ const Post = (props) => {
   const router = useRouter()
   const { id } = router.query
 
+
   return (
     <>
       <h1>Post: {id}</h1>
-      <TeamContainer data={props}/>
+      <TeamContainer data={id}/>
     </>
   )
 }
-export async function getServerSideProps({ res, params }) {
-    const { slug } = params;
-    const data = await getCollectionBySlug(slug,'personajes',res)
-    return { props: data }
-}
-
 
 export default Post
+
