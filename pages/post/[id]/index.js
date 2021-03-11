@@ -3,7 +3,7 @@ import Link from 'next/link'
 import {Layout, Team as TeamContainer} from '../../../containers'
 
 
-const Post = (props) => {
+const Post = () => {
   const router = useRouter()
   const { id } = router.query
 
