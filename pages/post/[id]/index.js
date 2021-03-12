@@ -9,10 +9,9 @@ const Post = () => {
 
 
   return (
-    <>
-      <h1>Post: {id}</h1>
+  <Layout>
       <TeamContainer data={id}/>
-    </>
+   </Layout>
   )
 }
 

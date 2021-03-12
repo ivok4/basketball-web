@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import {Container
+import {Container,
+  SideBar
 } from './styled'
 
 
@@ -25,12 +26,30 @@ useEffect(() => {
 console.log(players);
     return(
         <Container>
-          {!isLoading &&
-            players.map((player, index) => {
-           return (
-            <h5 key={index}>{player.FirstName}</h5>
-          );
-        })}
+          <SideBar>
+            {!isLoading &&
+              players.map((player, index) => {
+            return (
+                <img src={player.PhotoUrl}/>              
+              );
+            })}
+          </SideBar>
+          <div>
+            <p>Bradley</p>
+            <h1>Beal</h1>
+            <p>Height</p>
+            <h2>7,5</h2>
+            <p>Weight</p>
+            <h2>207</h2>
+            <p>Birth Country</p>
+            <h2>Usa</h2>
+            <p>Birth Date</p>
+            <h2>1993-06-28T00:00:00</h2>
+            <p>Birth City</p>
+            <h2>St. Louis</h2>
+            <p>Jersey</p>
+            <h2>3</h2>
+          </div>
         </Container>
         
     )
