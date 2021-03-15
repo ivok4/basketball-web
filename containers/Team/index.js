@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import {Container,
   SideBar
 } from './styled'
-
+import {Player} from '../../components'
 
 
 const Team = ({data}) => { 
@@ -10,6 +10,7 @@ const Team = ({data}) => {
 
 const [players, setPlayers] = useState([]);
 const [isLoading, setIsLoading] = useState(true);
+const [activePlayer, setActivePlayer] = useState([]);
 
 //get the team players
 useEffect(() => {
@@ -23,33 +24,22 @@ useEffect(() => {
       .catch((error) => console.log(error));
   }, [data]);
 
-console.log(players);
+
+// console.log(players);
+// console.log(activePlayer);
     return(
         <Container>
           <SideBar>
             {!isLoading &&
               players.map((player, index) => {
             return (
-                <img src={player.PhotoUrl}/>              
+                <img src={player.PhotoUrl} 
+
+                onClick={() => {setActivePlayer(player) }}/>              
               );
             })}
           </SideBar>
-          <div>
-            <p>Bradley</p>
-            <h1>Beal</h1>
-            <p>Height</p>
-            <h2>7,5</h2>
-            <p>Weight</p>
-            <h2>207</h2>
-            <p>Birth Country</p>
-            <h2>Usa</h2>
-            <p>Birth Date</p>
-            <h2>1993-06-28T00:00:00</h2>
-            <p>Birth City</p>
-            <h2>St. Louis</h2>
-            <p>Jersey</p>
-            <h2>3</h2>
-          </div>
+          <Player data={activePlayer}/>
         </Container>
         
     )

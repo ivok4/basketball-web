@@ -14,5 +14,4 @@ export const GridContainer = styled.div`
     background-color: #F3F7FA;
     grid-template-columns: 25% 25% 25% 25%;
     padding: 0 2%;
-    
 `

@@ -31,7 +31,6 @@ const TeamCard = (props) => {
                         src={teamInfo.WikipediaLogoUrl}
                     />
                     <h2 style={{color: "#"+teamInfo.SecondaryColor}}>{teamInfo.City} {teamInfo.Name}</h2>
-                    
             </Card>
             )}
            
