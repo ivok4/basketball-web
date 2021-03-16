@@ -19,7 +19,7 @@ export const Container = styled.nav`
         justify-content:end;
         width:fit-content;
             img{
-            width: 10%;
+            width: 7%;
             }
         }
     }
@@ -37,7 +37,7 @@ export const Container = styled.nav`
         }
     }
     
-    @media (min-width: 425px) {
+@media (min-width: 425px) {
         h1{
             
         }
