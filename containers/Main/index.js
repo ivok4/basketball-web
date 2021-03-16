@@ -9,7 +9,7 @@ const Main = () => {
         <Container>
             <div>
                 <div className="logoContainer">
-                    <img src="assets/NBA-logo.png" alt="Logo" />
+                    <img src="assets/Logo.png" alt="Logo" />
                     <h2>2020</h2>
                 </div>
                 <h1>PERSONAL PROJECTS</h1>
