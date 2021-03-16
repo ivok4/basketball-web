@@ -10,8 +10,6 @@ import { Link, BrowserRouter as Router, Route, Switch, useParams } from "react-r
 
 const TeamCard = (props) => {
     const  teamInfos  = props.teams;
-    //console.log(teamInfos);
-
     const router = useRouter()
 
 

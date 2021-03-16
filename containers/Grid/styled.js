@@ -12,6 +12,11 @@ export const GridContainer = styled.div`
     width:100%;
     height:fit-content;
     background-color: #F3F7FA;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 50% 50%;
     padding: 0 2%;
+    align-items:center;
+    justify-items:center;
+    @media (min-width: 1024px) {
+      grid-template-columns: 25% 25% 25% 25%;
+    }
 `

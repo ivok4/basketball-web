@@ -11,7 +11,8 @@ const Player = ({data}) => {
         BirthDate,
         BirthCity,
         BirthCountry,
-        Jersey
+        Jersey,
+        PhotoUrl
     } = data
 
     console.log(data);
@@ -36,6 +37,7 @@ const Player = ({data}) => {
                     <h2>{Jersey}</h2>
                 </div>
             </div>
+            <img src={PhotoUrl}/>
         </Container>
     )
 }

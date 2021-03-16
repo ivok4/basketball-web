@@ -10,10 +10,8 @@ class Grid extends React.Component {
     this.state = {
       teams:[],
       teamsBkp:[],
-      loading:true,
-      filter:''
+      loading:true
     }
-    //this.applyFilter = this.applyFilter.bind(this)
   }
   
   async componentDidMount(){
@@ -23,32 +21,17 @@ class Grid extends React.Component {
         throw Error(response.statusText);
       }
       const json = await response.json()
-      //console.log(json)
       this.setState({
         teams:json,
         loading:false
       })
     } catch (error) {
-      //console.log(error)
     }
   }
-
-//   applyFilter(e){
-//     console.log(e.target.value)
-//     const filtro = this.state.peliculas.filter(pelicula => {
-//       //return( pelicula.titulo === e.target.value )
-//       return (pelicula.titulo.includes(e.target.value))
-//     })
-//     console.log(filtro)
-//     // this.setState({
-//     //   filter:e.target.value
-//     // })
-//   }
 
   render() {
     return (
       <>
-        {/* { this.state.teams.map(team => <TeamCard key={team.id} data={team}/>)}  */}
         <GridContainer>
           <TeamCard teams={this.state.teams} />
         </GridContainer>

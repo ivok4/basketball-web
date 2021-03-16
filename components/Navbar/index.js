@@ -7,13 +7,12 @@ const Navbar = () => {
     return(
         <Container>
             <h1>
-                <a href="./">
-                <img src="assets/NBA-logo.png" alt="Logo" />
+                <a href="/">
+                <img src="assets/Logo.svg" alt="Logo" />
                 </a>
             </h1>
             <ul>
                 <li><a href="/teams">Teams</a></li>
-                <li><a href="#">Players</a></li>
                 <li><a href="#">About</a></li>
             </ul>
         </Container>
